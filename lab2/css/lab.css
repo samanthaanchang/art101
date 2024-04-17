@@ -13,11 +13,11 @@ h1 {
     color: rgb(109, 32, 109);
     font-size: 210%;
     text-decoration: rgb(72, 19, 58) wavy underline;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 p {
-    font-family: "Verdana, Geneva, Tahoma, sans-serif";
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-indent: 20px;
     margin-left: 10px;
 }
