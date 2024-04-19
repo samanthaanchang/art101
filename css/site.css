@@ -34,3 +34,8 @@ h1 {
   border: solid 1px #FFE6E6;
   background-color: #E1AFD1;
 }
+
+#my-portrait { 
+  width: 396px; 
+  height: 442px; 
+}
