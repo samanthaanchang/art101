@@ -1,29 +1,32 @@
-// index.js - Lab 6: Arrays and Objects
+// index.js - Lab 7: Functions
 // Author: Samantha Chang
-// Date: 4/29/2024
+// Date: 5/2/2024
 
-// Define Variables
-myTransport = ["Car", "Bus", "Walking", "Carpool", "Bike"];
+// Functions
+// sortUserName - a function takes user input and sorts letters of name
+function sortUserName() {
+  var userName = window.prompt("Hello! Please tell me your name so I can fix it.")
+  console.log("userName =", userName);
 
-// Create an Object for my Main Ride
-myMainRide = {
-  make: "Toyota",
-  model: "Corolla",
-  color: "White",
-  year: 2021,
-  age: function() {
-  return 2024 - this.year;
-  }
+  var nameArray = userName.split('');
+  console.log("nameArray =", nameArray);
+
+  var nameArraySort = nameArray.sort();
+  console.log("nameArraySort =", nameArraySort);
+
+  var nameSorted = nameArraySort.join('');
+  console.log("nameSorted =", nameSorted);
+
+  return nameSorted;
+
+
+
 }
 
 
 // Output
-document.writeln("Kinds of Transportation I use: ", myTransport, "</br>")
-document.writeln("My Main Ride: <pre>",
-    JSON.stringify(myMainRide, null, '\t'), "</pre>");
-
-
-
+document.writeln("Here's your name fixed har har: ",
+  sortUserName(), "</br>");
 
 // this is an example function and this comment tells what it doees and what parameters are passed to it.
 function myFunction(param1, param2) {
@@ -33,7 +36,7 @@ function myFunction(param1, param2) {
 
 function main() {
   console.log("Main function started.");
-  // the code that makes everything happens
+  // the code that makes everything happen
 }
 
 // let's get this party started
