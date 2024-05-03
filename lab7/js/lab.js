@@ -5,7 +5,10 @@
 // Functions
 // sortUserName - a function takes user input and sorts letters of name
 function sortUserName() {
+  
   var userName = window.prompt("Hello! Please tell me your name so I can fix it.")
+  // Can you make your function ignore/omit spaces?
+  userName = userName.trim();
   console.log("userName =", userName);
 
   var nameArray = userName.split('');
@@ -28,16 +31,3 @@ function sortUserName() {
 document.writeln("Here's your name fixed har har: ",
   sortUserName(), "</br>");
 
-// this is an example function and this comment tells what it doees and what parameters are passed to it.
-function myFunction(param1, param2) {
-  // some code here
-  // return results;
-}
-
-function main() {
-  console.log("Main function started.");
-  // the code that makes everything happen
-}
-
-// let's get this party started
-main();
