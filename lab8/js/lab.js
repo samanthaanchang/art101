@@ -1,40 +1,22 @@
-// index.js - Lab 6: Arrays and Objects
+// index.js - Lab 8: Anon Functions and Callbacks 
 // Author: Samantha Chang
-// Date: 4/29/2024
+// Date: 5/6/2024
 
-// Define Variables
-myTransport = ["Car", "Bus", "Walking", "Carpool", "Bike"];
+function squareIt(x){
 
-// Create an Object for my Main Ride
-myMainRide = {
-  make: "Toyota",
-  model: "Corolla",
-  color: "White",
-  year: 2021,
-  age: function() {
-  return 2024 - this.year;
-  }
+    return x * x;
 }
 
+console.log("5 squared: ",squareIt(5));
+console.log("3 squared: ",squareIt(3));
 
-// Output
-document.writeln("Kinds of Transportation I use: ", myTransport, "</br>")
-document.writeln("My Main Ride: <pre>",
-    JSON.stringify(myMainRide, null, '\t'), "</pre>");
+array = [5,3,7,25,32]
+console.log("my array: ",array);
 
+var result = array.map(squareIt);
+console.log("squared array: ", result);
 
-
-
-// this is an example function and this comment tells what it doees and what parameters are passed to it.
-function myFunction(param1, param2) {
-  // some code here
-  // return results;
-}
-
-function main() {
-  console.log("Main function started.");
-  // the code that makes everything happens
-}
-
-// let's get this party started
-main();
+var result = array.map(function(x){
+    return x*2;
+})
+console.log("array again: ", result);
