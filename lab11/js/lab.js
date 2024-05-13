@@ -1,40 +1,18 @@
-// index.js - Lab 6: Arrays and Objects
+// lab.js - This simple JavaScript/jQuery script gets a value from an input field and outputs a modified version.
+// Requirements: jQuery must be loaded for this script to work.
 // Author: Samantha Chang
-// Date: 4/29/2024
+// Date: 05/20/2024
 
-// Define Variables
-myTransport = ["Car", "Bus", "Walking", "Carpool", "Bike"];
-
-// Create an Object for my Main Ride
-myMainRide = {
-  make: "Toyota",
-  model: "Corolla",
-  color: "White",
-  year: 2021,
-  age: function() {
-  return 2024 - this.year;
-  }
+// Sorts the characters of a string in alphabetical order.
+function sortString(inputString) {
+    // We have to convert our string to an array and back again to sort it
+    return inputString.split('').sort().join('');
 }
 
+// click listener for button
+$("#submit").click(function(){
+    const userName = $("#user-name").val();
+    const userNameSorted = sortString(userName);
+    $("#output").html('<div class="text"><p>' + userNameSorted + '</p></div>');
 
-// Output
-document.writeln("Kinds of Transportation I use: ", myTransport, "</br>")
-document.writeln("My Main Ride: <pre>",
-    JSON.stringify(myMainRide, null, '\t'), "</pre>");
-
-
-
-
-// this is an example function and this comment tells what it doees and what parameters are passed to it.
-function myFunction(param1, param2) {
-  // some code here
-  // return results;
-}
-
-function main() {
-  console.log("Main function started.");
-  // the code that makes everything happens
-}
-
-// let's get this party started
-main();
+});

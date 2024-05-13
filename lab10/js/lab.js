@@ -1,40 +1,26 @@
-// index.js - Lab 6: Arrays and Objects
+// lab.js -  This simple JavaScript/jQuery script appends new elements to an output div
+// Requirements: jQuery must be loaded for this script to work.
 // Author: Samantha Chang
-// Date: 4/29/2024
+// Date: 05/17/2024
 
-// Define Variables
-myTransport = ["Car", "Bus", "Walking", "Carpool", "Bike"];
 
-// Create an Object for my Main Ride
-myMainRide = {
-  make: "Toyota",
-  model: "Corolla",
-  color: "White",
-  year: 2021,
-  age: function() {
-  return 2024 - this.year;
-  }
+
+function generateRandomText() {
+    const text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
+    const min = 3;
+    const max = 100;
+    const randLen = Math.floor(Math.random() * (max - min + 1)) + min;
+    // Get a random starting index to slice the Lorem Ipsum text
+    const randStart = Math.floor(Math.random() * (text.length - randLen + 1));
+    // Generate the random Lorem Ipsum-like text
+    return text.slice(randStart, randStart + randLen);
 }
 
 
-// Output
-document.writeln("Kinds of Transportation I use: ", myTransport, "</br>")
-document.writeln("My Main Ride: <pre>",
-    JSON.stringify(myMainRide, null, '\t'), "</pre>");
+  // click listener for button
+$("#make-convo").click(function(){
+    const newText = generateRandomText();
+    // append a new div to our output div
+    $("#output").append('<div class="text"><p>' + newText + '</p></div>');
 
-
-
-
-// this is an example function and this comment tells what it doees and what parameters are passed to it.
-function myFunction(param1, param2) {
-  // some code here
-  // return results;
-}
-
-function main() {
-  console.log("Main function started.");
-  // the code that makes everything happens
-}
-
-// let's get this party started
-main();
+});

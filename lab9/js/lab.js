@@ -1,40 +1,21 @@
-// index.js - Lab 6: Arrays and Objects
-// Author: Samantha Chang
-// Date: 4/29/2024
+/*
+   lab.js - This simple JavaScript/jQuery script uses buttons to modify some elements on the page
 
-// Define Variables
-myTransport = ["Car", "Bus", "Walking", "Carpool", "Bike"];
+   Requirements: jQuery must be loaded for this script to work.
 
-// Create an Object for my Main Ride
-myMainRide = {
-  make: "Toyota",
-  model: "Corolla",
-  color: "White",
-  year: 2021,
-  age: function() {
-  return 2024 - this.year;
-  }
-}
+   Author: Samantha Chang
+   Date: 5/13/2024
+*/
 
+// add button to challenge section
+$("#challenge").append("<button id='button-challenge'>Make Special</button>");
 
-// Output
-document.writeln("Kinds of Transportation I use: ", myTransport, "</br>")
-document.writeln("My Main Ride: <pre>",
-    JSON.stringify(myMainRide, null, '\t'), "</pre>");
+// add a click listener to the challenge button
+$("#button-challenge").click(function(){
+  // now add (or subtract) the "special" class to the section
+  $("#challenge").toggleClass("special");
+  
+});
 
 
 
-
-// this is an example function and this comment tells what it doees and what parameters are passed to it.
-function myFunction(param1, param2) {
-  // some code here
-  // return results;
-}
-
-function main() {
-  console.log("Main function started.");
-  // the code that makes everything happens
-}
-
-// let's get this party started
-main();

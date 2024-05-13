@@ -1,40 +1,39 @@
-// index.js - Lab 6: Arrays and Objects
+// lab.js - Loops
 // Author: Samantha Chang
-// Date: 4/29/2024
+// Date: 05/27/2024
 
-// Define Variables
-myTransport = ["Car", "Bus", "Walking", "Carpool", "Bike"];
+const factorObj = { 
+    3: "Fizz", 
+    5: "Buzz", 
+    7: "Boom"
+}
 
-// Create an Object for my Main Ride
-myMainRide = {
-  make: "Toyota",
-  model: "Corolla",
-  color: "White",
-  year: 2021,
-  age: function() {
-  return 2024 - this.year;
-  }
+function FizzBuzz(maxNums, factorObj) { 
+    // iterate over all numbers based on maxNums    
+    for(var num=0; num < maxNums; num++) { 
+        // reset output string 
+        var outputStr = ""; 
+
+        for (var factor in factorObj) { 
+            if (num % factor == 0) { 
+                outputStr += factorObj[factor];
+            }
+        }
+
+        if (outputStr) { 
+            outputStr = " - " + outputStr + "!"; 
+        }
+
+        $("#output").append("<p>" + num.toString() + outputStr + "</p>");
+    }
 }
 
 
-// Output
-document.writeln("Kinds of Transportation I use: ", myTransport, "</br>")
-document.writeln("My Main Ride: <pre>",
-    JSON.stringify(myMainRide, null, '\t'), "</pre>");
+$("#run").click(function() {
+    var maxNum = $("#maxNum").val();
+    FizzBuzz(maxNum, factorObj)
+});
 
 
 
 
-// this is an example function and this comment tells what it doees and what parameters are passed to it.
-function myFunction(param1, param2) {
-  // some code here
-  // return results;
-}
-
-function main() {
-  console.log("Main function started.");
-  // the code that makes everything happens
-}
-
-// let's get this party started
-main();

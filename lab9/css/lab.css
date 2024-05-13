@@ -8,8 +8,9 @@
     background-color: #DDD8C4;
   }
 
-  #car2{
-
-    width: 400px;
-
-  }
+.special { 
+  background-color: lavender;
+  border: dotted 50px rgb(0, 225, 255);
+  color: white; 
+  font-weight: bold;
+}
