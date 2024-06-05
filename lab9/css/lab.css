@@ -9,8 +9,8 @@
   }
 
 .special { 
-  background-color: lavender;
-  border: dotted 50px rgb(0, 225, 255);
+  background-color: rgb(69, 69, 92);
+  border: dotted 50px rgb(18, 18, 60);
   color: white; 
   font-weight: bold;
 }

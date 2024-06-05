@@ -5,10 +5,13 @@
 
    Author: Samantha Chang
    Date: 5/13/2024
+   Edit Date: 6/5/2024
 */
 
 // add button to challenge section
-$("#challenge").append("<button id='button-challenge'>Make Special</button>");
+$("#challenge").append("<button id='button-challenge'>Make Special! :D Wahoo</button>");
+
+
 
 // add a click listener to the challenge button
 $("#button-challenge").click(function(){
@@ -17,5 +20,4 @@ $("#button-challenge").click(function(){
   
 });
 
-
-
+// it only makes PART of the webpage special, not all of it.
