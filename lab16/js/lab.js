@@ -6,9 +6,9 @@
 $.ajax({
     // The URL for the request (from the api docs)
     url: "https://xkcd.com/info.0.json",
-    headers: {
-        'Access-Control-Allow-Origin':'http://127.0.0.1:5500'
-    },
+    // headers: {
+    //     'Access-Control-Allow-Origin':'http://127.0.0.1:5500'
+    // },
     // Whether this is a POST or GET request
     type: "GET",
     // The type of data we expect back
