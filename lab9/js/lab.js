@@ -16,7 +16,7 @@ $("#challenge").append("<button id='button-challenge'>Make Special! :D Wahoo</bu
 // add a click listener to the challenge button
 $("#button-challenge").click(function(){
   // now add (or subtract) the "special" class to the section
-  $("#challenge").toggleClass("special");
+  $("#section").toggleClass("special");
   
 });
 
